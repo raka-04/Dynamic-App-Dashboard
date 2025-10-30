@@ -10,7 +10,8 @@ export const fetchFormSchema = async () => {
     const response = await axios.get(`${API_BASE_URL}/form-schema`);
     return response.data;
   } catch (error) {
-    
+    console.error('Error fetching dynamic form schema:', error);
+    throw new Error('Could not load form definition from backend.');
   }
 };
 
@@ -19,6 +20,7 @@ export const fetchTableData = async () => {
     const response = await axios.get(JSONPLACEHOLDER_URL);
     return response.data;
   } catch (error) {
-    
+    console.error('Error fetching table data:', error);
+    throw new Error('Could not load data grid records.');
   }
 };
