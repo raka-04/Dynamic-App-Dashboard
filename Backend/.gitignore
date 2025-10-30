@@ -1,0 +1,33 @@
+Dependency Directories
+
+/node_modules
+
+Logs
+/npm-debug.log
+.yarn-integrity
+
+Environment Variables
+
+DANGER: NEVER commit .env files as they contain sensitive secrets.
+
+/.env
+/.env.*
+
+Firebase Admin SDK Credentials
+
+DANGER: This file contains the private key for your Firebase project
+
+and MUST NOT be committed to version control.
+
+/serviceAccountKey.json
+
+Build artifacts (if you were to compile the JS)
+
+/dist
+/build
+
+IDE and OS generated files
+
+.DS_Store
+*.sublime-workspace
+.vscode/
