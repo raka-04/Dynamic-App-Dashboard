@@ -12,7 +12,16 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors()); // Enables cross-origin requests from the frontend
+const allowedOrigins = [
+  'http://localhost:5173',          // for local development
+  'https://dynamic-app-dashboard.vercel.app', // your deployed frontend
+         // optional custom domain
+];
+
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true,
+})); // Enables cross-origin requests from the frontend
 app.use(express.json());
 
 // API Routes

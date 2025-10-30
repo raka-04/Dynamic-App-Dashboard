@@ -2,7 +2,7 @@
 
 import axios from 'axios';
 
-const API_BASE_URL = import.meta.env.REACT_APP_API_BASE_URL || 'http://localhost:5000/api';
+const API_BASE_URL = 'https://dynamic-app-dashboard-6mnc.vercel.app' || 'http://localhost:5000/api';
 const JSONPLACEHOLDER_URL = import.meta.env.REACT_APP_JSONPLACEHOLDER_URL || 'https://jsonplaceholder.typicode.com/comments';
 
 export const fetchFormSchema = async () => {
